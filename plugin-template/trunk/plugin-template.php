@@ -15,8 +15,7 @@ if (!function_exists('add_action')) {
     exit;
 }
 
-define('COMMON_NINJA_PLUGIN_VERSION', '1.0.0');
-define('COMMON_NINJA_PLUGIN_DIR', plugin_dir_path(__FILE__) . 'commonninja/');
+$COMMON_NINJA_PLUGIN_DIR = plugin_dir_path(__FILE__) . 'commonninja/';
 
 require_once(COMMON_NINJA_PLUGIN_DIR . 'trait.commonninja-plugin.php');
 require_once(COMMON_NINJA_PLUGIN_DIR . 'trait.commonninja-styles.php');
