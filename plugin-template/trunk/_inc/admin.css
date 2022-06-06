@@ -1,0 +1,41 @@
+.menu-top.toplevel_page_commonninja .wp-menu-image {
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#poststuff.cn-integrations {
+  padding-top: 0;
+}
+.cn-integrations.cn-integrations-error {
+  border: dotted 1px #ccc;
+  display: inline-block;
+  padding: 25px;
+  margin: 40px;
+  border-radius: 5px;
+  line-height: 1.5;
+  text-align: left;
+  font-size: 16px;
+}
+.cn-integrations.cn-integrations-error p {
+  font-size: 16px;
+  margin: 0 0 10px;
+  text-align: center;
+}
+.cn-integrations.cn-integrations-error ol {
+  margin: 20px 40px 0;
+}
+.cn-integrations.cn-integrations-error a {
+  text-decoration: none;
+  font-weight: 500;
+}
+.cn-integrations.cn-integrations-error a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+.cn-integrations.cn-integrations-error h4 {
+  font-size: 1.4em;
+  margin: 0 0 10px;
+  text-align: center;
+  color: #d12020;
+}
