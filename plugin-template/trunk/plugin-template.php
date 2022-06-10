@@ -7,7 +7,7 @@
 * Author URI: https://www.commoninja.com/
 * Version: 1.0.0
 * Plugin License: TBA
-* Text Domain: commonninja-plugin
+* Text Domain: plugin-template
 */
 
 require_once(plugin_dir_path(__FILE__) . 'commonninja/commonninja.init.php');
