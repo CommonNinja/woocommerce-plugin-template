@@ -1,41 +1,49 @@
-.menu-top.toplevel_page_commonninja .wp-menu-image {
-  background-size: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
+ .cn-integrations.cn-integrations-plugin {
+  display: block;
+  height: calc(100vh - 32px);
+  overflow: hidden;
+  margin: 0;
+  border: none;
 }
-#poststuff.cn-integrations {
-  padding-top: 0;
+
+.cn-integrations.cn-integrations-error img {
+  padding-bottom: 20px;
+  width: 280px;
 }
+
 .cn-integrations.cn-integrations-error {
-  border: dotted 1px #ccc;
-  display: inline-block;
-  padding: 25px;
-  margin: 40px;
-  border-radius: 5px;
+  text-align: center;
+  font-size: 24px;
+  margin-top: 18vh;
+  color: #1b1b1b;
   line-height: 1.5;
-  text-align: left;
-  font-size: 16px;
 }
-.cn-integrations.cn-integrations-error p {
-  font-size: 16px;
-  margin: 0 0 10px;
-  text-align: center;
-}
-.cn-integrations.cn-integrations-error ol {
-  margin: 20px 40px 0;
-}
-.cn-integrations.cn-integrations-error a {
+
+.cn-integrations.cn-integrations-error a.question-mark {
+  position: relative;
+  padding: 0px 7px 0px 2px;
   text-decoration: none;
-  font-weight: 500;
+  letter-spacing: 1px;
+  color: inherit;
 }
-.cn-integrations.cn-integrations-error a:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
+
+.cn-integrations.cn-integrations-error a.question-mark:after {
+  content: "?";
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #b046f1;
+  font-size: 14px;
+  font-weight: 700;
 }
-.cn-integrations.cn-integrations-error h4 {
-  font-size: 1.4em;
-  margin: 0 0 10px;
-  text-align: center;
-  color: #d12020;
+
+.cn-integrations.cn-integrations-error a.action {
+  padding: 10px 24px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 16px;
+  color: white;
+  background: #b046f1;
+  border-radius: 20px;
+  text-decoration: none;
 }

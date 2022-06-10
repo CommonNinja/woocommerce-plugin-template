@@ -1,4 +1,4 @@
-=== My Plugin: Short Description ===
+=== Common Ninja Plugin: Build & Monetize E-Commerce Apps ===
 Contributors: CommonNinja
 Donate link: https://www.commoninja.com
 Tags: Plugin
@@ -19,7 +19,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Screenshots ==
 
-1. 
+1. My screenshot
 
 
 
