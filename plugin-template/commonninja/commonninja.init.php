@@ -76,11 +76,22 @@
     };
 
     $cn_renderErrorPage = function ($error_message) use ($cn_plugin_page_slug, $cn_getMenuIcon) {
+        $allowed_html = array(
+            'a'      => array(
+                'href'  => array(),
+                'title' => array(),
+                'class' => array(),
+                'target' => array(),
+            ),
+            'br'     => array(),
+            'em'     => array(),
+            'strong' => array(),
+        );
         echo '<div class="cn-integrations cn-integrations-error">
         <img src="' . $cn_getMenuIcon() . '" alt="Common Ninja Logo" style="max-width: 100px" />
-        <h4 style="font-size: 20px; margin: 0 0 10px;">' . $error_message['error'] . '</h4>
-        <p style="font-size: 16px; margin: 0 0 20px;">' . $error_message['message'] . '</p>
-        <a class="action" href="' . $error_message['link'] . '">' . $error_message['action'] .'</a> 
+        <h4 style="font-size: 20px; margin: 0 0 10px;">' . wp_kses($error_message['error'], $allowed_html) . '</h4>
+        <p style="font-size: 16px; margin: 0 0 20px;">' . wp_kses($error_message['message'], $allowed_html) . '</p>
+        <a class="action" href="' . $error_message['link'] . '">' . wp_kses($error_message['action'], $allowed_html) .'</a> 
     </div>';
     };
 
