@@ -37,8 +37,9 @@
     };
 
     $cn_getRedirectUrl = function () use ($cn_getEncodedUrl) {
-        $url = sanitize_url($_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
-        $url = substr($url, "&", true) ?: $url;
+        $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+        $url = sanitize_url($protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
+        $encodedUrl = $cn_getEncodedUrl($url);
         return $cn_getEncodedUrl($url);
     };
 
@@ -48,10 +49,9 @@
 
     $cn_generatePluginUrl = function ($token) use ($cn_plugin_config, $cn_getRedirectUrl, $cn_getStoreUrl) {
         $base_url = 'https://integrations.commoninja.com/integrations/woocommerce/';
-
-        $query_params = !$token ? 'redirectUrl=http://' . $cn_getRedirectUrl() : 'token=' . $token;
-
-        return $base_url . $cn_plugin_config['cn_app_id'] . '/oauth/authenticate?store_url=' . $cn_getStoreUrl() . "&" . $query_params;
+        $query_params = !$token ? 'redirectUrl=' . $cn_getRedirectUrl() : 'token=' . $token;
+        $final_url = $base_url . $cn_plugin_config['cn_app_id'] . '/oauth/authenticate?store_url=' . $cn_getStoreUrl() . "&" . $query_params;
+        return $final_url;
     };
 
     $cn_renderPlugin = function ($plugin_url) {
