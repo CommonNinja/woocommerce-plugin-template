@@ -27,4 +27,4 @@ Please find more information in Common Ninja's [official docs](https://docs.comm
 ## Need help?
 
 * Join our Discord community: [https://discord.com/invite/cxqUTbvMNd](https://discord.com/invite/cxqUTbvMNd)
-* Contact us at [mailto:contact@commoninja.com](contact@commoninja.com)
+* Contact us at [contact@commoninja.com](mailto:contact@commoninja.com)
