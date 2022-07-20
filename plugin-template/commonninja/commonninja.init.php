@@ -178,7 +178,7 @@
         $icon_path = $cn_getMenuIcon();
         $plugin_class = isset($cn_plugin_config['parent_menu']) && !empty($cn_plugin_config['parent_menu']) ? $cn_plugin_config['parent_menu']['slug'] : $cn_plugin_page_slug;
 
-        echo '<style>.menu-top.toplevel_page_' . $plugin_class . ' ' . '.wp-menu-image { background-size: 50%; background-repeat: no-repeat; background-position: center; background-image: url(' . $icon_path . '); } </style>';
+        echo '<style>.menu-top.toplevel_page_' . esc_attr($plugin_class) . ' ' . '.wp-menu-image { background-size: 50%; background-repeat: no-repeat; background-position: center; background-image: url(' . esc_url_raw($icon_path) . '); } </style>';
     };
 
     $cn_init = function () use ($cn_addPluginPage, $cn_loadPluginStyle, $cn_loadMenuIcon) {
